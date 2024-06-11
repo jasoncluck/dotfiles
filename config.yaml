@@ -10,7 +10,11 @@ dotfiles:
     src: config/tmux/tmux.conf
     dst: ~/.config/tmux/tmux.conf
 profiles:
-  dev-dsk-clujason-2b-75058408.us-west-2.amazon.com:
+  work:
     dotfiles:
-    - d_nvim
-    - f_tmux.conf
+      - d_nvim
+      - f_tmux.conf
+  work-remote:
+    dotfiles:
+      - d_nvim
+      - f_tmux.conf
