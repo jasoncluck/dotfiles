@@ -3,4 +3,4 @@
 	url = https://github.com/deadc0de6/dotdrop.git
 [submodule "/home/clujason/dotfiles/dotfiles/config/tmux/plugins/tpm"]
 	path = /home/clujason/dotfiles/dotfiles/config/tmux/plugins/tpm
-	url = git@github.com:tmux-plugins/tpm.git
+	url = https://github.com/tmux-plugins/tpm.git
