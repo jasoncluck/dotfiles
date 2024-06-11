@@ -15,12 +15,11 @@ dotfiles:
 profiles:
   work:
     dotfiles:
-    - d_nvim
-    - f_tmux.conf
+      - d_nvim
+      - f_tmux.conf
+      - d_tpm
   work-remote:
     dotfiles:
-    - d_nvim
-    - f_tmux.conf
-  dev-dsk-clujason-2b-75058408.us-west-2.amazon.com:
-    dotfiles:
-    - d_tpm
+      - d_nvim
+      - f_tmux.conf
+      - d_tpm
