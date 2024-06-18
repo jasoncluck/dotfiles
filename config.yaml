@@ -6,9 +6,6 @@ dotfiles:
   d_nvim:
     src: config/nvim
     dst: ~/.config/nvim
-  f_tmux.conf:
-    src: config/tmux/tmux.conf
-    dst: ~/.config/tmux/tmux.conf
   d_wezterm:
     src: config/wezterm
     dst: ~/.config/wezterm
@@ -16,14 +13,15 @@ profiles:
   work:
     dotfiles:
       - d_nvim
-      - f_tmux.conf
-      - d_wezterm.conf
+      - d_wezterm
   work-remote:
     dotfiles:
       - d_nvim
-      - f_tmux.conf
   fedora:
     dotfiles:
       - d_nvim
-      - f_tmux.conf
+      - d_wezterm
+  mac:
+    dotfiles:
+      - d_nvim
       - d_wezterm
