@@ -28,8 +28,6 @@ c.unix_domains = {
 -- domain on startup.
 -- If you prefer to connect manually, leave out this line.
 c.default_gui_startup_args = { "connect", "unix" }
--- current wayland version isn't moveable
-c.enable_wayland = false
 
 c.font_size = 11.0
 c.audible_bell = "Disabled"
@@ -43,6 +41,11 @@ if platform == "mac" then
 	c.set_environment_variables = {
 		PATH = "/opt/homebrew/bin/:" .. os.getenv("PATH"),
 	}
+end
+
+-- current wayland version isn't moveable
+if platform == "linux" then
+	c.enable_wayland = false
 end
 
 appearance.apply_to_config(c)

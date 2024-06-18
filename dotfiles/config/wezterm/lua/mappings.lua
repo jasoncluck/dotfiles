@@ -15,14 +15,14 @@ end
 
 local M = {}
 
-local leader = { mods = mod.c, key = "a", timeout_miliseconds = 1001 }
+local leader = { mods = mod.c, key = "f", timeout_miliseconds = 1001 }
 
 local keys = function()
 	local keys = {
 
 		-- pane and tabs
-		keybind({ mod.l }, "%", act.SplitVertical({ domain = "CurrentPaneDomain" })),
-		keybind({ mod.l }, '"', act.SplitHorizontal({ domain = "CurrentPaneDomain" })),
+		keybind({ mod.l }, "-", act.SplitVertical({ domain = "CurrentPaneDomain" })),
+		keybind({ mod.l }, "\\", act.SplitHorizontal({ domain = "CurrentPaneDomain" })),
 		keybind({ mod.l }, "z", act.TogglePaneZoomState),
 		keybind({ mod.l }, "c", act.SpawnTab("CurrentPaneDomain")),
 		keybind({ mod.l }, "x", act.CloseCurrentPane({ confirm = true })),
