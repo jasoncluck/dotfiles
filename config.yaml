@@ -9,17 +9,21 @@ dotfiles:
   f_tmux.conf:
     src: config/tmux/tmux.conf
     dst: ~/.config/tmux/tmux.conf
-  d_tpm:
-    src: config/tmux/plugins/tpm
-    dst: ~/.config/tmux/plugins/tpm
+  d_wezterm:
+    src: config/wezterm
+    dst: ~/.config/wezterm
 profiles:
   work:
     dotfiles:
       - d_nvim
       - f_tmux.conf
-      - d_tpm
+      - d_wezterm.conf
   work-remote:
     dotfiles:
       - d_nvim
       - f_tmux.conf
-      - d_tpm
+  fedora:
+    dotfiles:
+      - d_nvim
+      - f_tmux.conf
+      - d_wezterm
