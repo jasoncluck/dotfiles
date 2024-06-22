@@ -17,18 +17,6 @@ else
 	platform = "linux"
 end
 
-c.unix_domains = {
-	{
-		name = "unix",
-	},
-}
-
--- This causes `wezterm` to act as though it was started as
--- `wezterm connect unix` by default, connecting to the unix
--- domain on startup.
--- If you prefer to connect manually, leave out this line.
-c.default_gui_startup_args = { "connect", "unix" }
-
 c.font_size = 11.0
 c.audible_bell = "Disabled"
 c.adjust_window_size_when_changing_font_size = false
