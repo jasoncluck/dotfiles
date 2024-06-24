@@ -25,17 +25,23 @@ return {
     end,
     formatters_by_ft = {
       lua = { 'stylua' },
-      -- Conform can also run multiple formatters sequentially
-      -- python = { "isort", "black" },
-      --
-      -- You can use a sub-list to tell conform to run *until* a formatter
-      -- is found.
       javascript = { { 'prettierd', 'prettier' } },
-      typecript = { { 'prettierd', 'prettier' } },
+      typescript = { { 'prettierd', 'prettier' } },
       javascripttreact = { { 'prettierd', 'prettier' } },
-      typecriptreact = { { 'prettierd', 'prettier' } },
+      typescriptreact = { { 'prettierd', 'prettier' } },
       ['markdown'] = { { 'prettierd', 'prettier' }, 'markdownlint', 'markdown-toc' },
       ['markdown.mdx'] = { { 'prettierd', 'prettier' }, 'markdownlint', 'markdown-toc' },
     },
   },
+  config = function(_, opts)
+    local conform = require 'conform'
+
+    -- Setup "conform.nvim" to work
+    conform.setup(opts)
+
+    -- Customise the default "prettier" command to format Markdown files as well
+    conform.formatters.prettier = {
+      prepend_args = { '--prose-wrap', 'always' },
+    }
+  end,
 }

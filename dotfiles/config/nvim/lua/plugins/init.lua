@@ -4,6 +4,7 @@ return {
   require 'plugins.comment',
   require 'plugins.conform',
   require 'plugins.debug',
+  require 'plugins.flash',
   require 'plugins.gitsigns',
   require 'plugins.indent_line',
   require 'plugins.lint',
@@ -12,8 +13,8 @@ return {
   require 'plugins.neo-tree',
   require 'plugins.smart-splits',
   require 'plugins.telescope',
+  require 'plugins.theme',
   require 'plugins.todo-comments',
   require 'plugins.treesitter',
-  require 'plugins.theme',
   require 'plugins.which-key',
 }
