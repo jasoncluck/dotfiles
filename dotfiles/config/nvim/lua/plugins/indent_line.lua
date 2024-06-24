@@ -5,5 +5,9 @@ return {
     -- See `:help ibl`
     main = 'ibl',
     opts = {},
+    event = 'BufReadPost',
+    config = function()
+      require('ibl').setup()
+    end,
   },
 }
