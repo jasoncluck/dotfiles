@@ -1,6 +1,8 @@
+local wez = require("wezterm")
 local M = {}
 
 M.apply_to_config = function(c)
+	c.font = wez.font("JetBrains Mono", { weight = "Bold" })
 	c.color_scheme = "catppuccin-frappe"
 	-- local scheme = wez.color.get_builtin_schemes()["catppuccin-frappe"]
 	c.window_background_opacity = 0.96
